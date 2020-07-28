@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Create Survey</title>
+  </head>
+  <body>
+    <header class="header">
+      <h3>Create a Simple Survey</h3>
+    </header>
+    <main>
+      <div class="box-header">
+        <div class="menu-icon">
+          <span class="material-icons md-light">
+            menu
+          </span>
+        </div>
+      </div>
+      <div class="box">
+        <form autocomplete="off" class="card-form">
+          <input
+            type="text"
+            id="question-1"
+            name="question-1"
+            class="question-input"
+            placeholder="Question"
+            autofocus
+          />
+          <div id="options-form-1" class="options-form">
+            <input
+              type="text"
+              placeholder="Option"
+              class="option-input"
+              id="question-1-option-1"
+              onfocus="createNewOption(this)"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="box-header">
+        <div class="menu-icon">
+          <span class="material-icons md-light">
+            menu
+          </span>
+        </div>
+      </div>
+      <div class="box">
+        <form autocomplete="off" class="card-form">
+          <input
+            type="text"
+            name="question-input"
+            class="question-input"
+            placeholder="Question"
+          />
+          <div class="options-form">
+            <input
+              type="text"
+              placeholder="Option"
+              class="option-input"
+              id="answer1"
+            />
+            <input
+              type="text"
+              placeholder="Option"
+              class="option-input"
+              id="answer2"
+            />
+            <input
+              type="text"
+              placeholder="Option"
+              class="option-input"
+              id="answer3"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">Copyright Jonas Högman</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
