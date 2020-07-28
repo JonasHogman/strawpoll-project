@@ -1,4 +1,8 @@
 function createNewOption(element) {
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
   // first check that this is the last option
   if (element.nextElementSibling == null) {
     console.log(element.id);
@@ -20,6 +24,10 @@ function createNewOption(element) {
 
 function createNewQuestion(element) {
   var questionsWrapper = element.parentNode.parentNode;
+  questionsWrapper.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
   if (questionsWrapper.nextElementSibling == null) {
     let question = element.id.split("-")[1];
 
