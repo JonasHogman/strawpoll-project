@@ -2,24 +2,59 @@ function createNewOption(element) {
   // first check that this is the last option
   if (element.nextElementSibling == null) {
     console.log(element.id);
-    question = element.id.split("-")[1];
-    option = element.id.split("-")[3];
-    console.log(question);
-    console.log(option);
+    let question = element.id.split("-")[1];
+    let option = element.id.split("-")[3];
 
-    var para = document.createElement("input");
-    para.type = "text";
-    para.placeholder = "Option";
-    para.className = "option-input";
-    para.id = "question-" + question + "-option-" + option + 1 + "";
-    para.onfocus = function () {
+    let newOption = document.createElement("input");
+    newOption.type = "text";
+    newOption.placeholder = "Option";
+    newOption.className = "option-input";
+    newOption.id = "question-" + question + "-option-" + option + 1 + "";
+    newOption.onfocus = function () {
       createNewOption(this);
     };
 
-    element.parentNode.appendChild(para);
-  } else {
-    console.log(element.nextElementSibling);
+    element.parentNode.appendChild(newOption);
   }
 }
 
-function createNewQuestion() {}
+function createNewQuestion(element) {
+  var questionsWrapper = element.parentNode.parentNode;
+  if (questionsWrapper.nextElementSibling == null) {
+    let question = element.id.split("-")[1];
+
+    let questionBoxHtml = `
+      <div class="box-header">
+      <div class="menu-icon">
+        <span class="material-icons md-light">
+          menu
+        </span>
+      </div>
+    </div>
+    <form autocomplete="off" class="card-form">
+      <input
+        type="text"
+        id="question-${question + 1}"
+        name="question-1"
+        class="question-input"
+        placeholder="Question"
+        onfocus="createNewQuestion(this)"
+        autofocus
+      />
+      <div class="options-form">
+        <input
+          type="text"
+          placeholder="Option"
+          class="option-input"
+          id="question-${question + 1}-option-1"
+          onfocus="createNewOption(this)"
+        />
+      </div>
+    </form>`;
+    newQuestionBox = document.createElement("div");
+    newQuestionBox.className = "box";
+    newQuestionBox.innerHTML = questionBoxHtml;
+
+    questionsWrapper.parentNode.appendChild(newQuestionBox);
+  }
+}

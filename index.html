@@ -15,18 +15,16 @@
     <title>Create Survey</title>
   </head>
   <body>
-    <header class="header">
-      <h3>Create a Simple Survey</h3>
-    </header>
+    <header class="header"></header>
     <main>
-      <div class="box-header">
-        <div class="menu-icon">
-          <span class="material-icons md-light">
-            menu
-          </span>
-        </div>
-      </div>
       <div class="box">
+        <div class="box-header">
+          <div class="menu-icon">
+            <span class="material-icons md-light">
+              menu
+            </span>
+          </div>
+        </div>
         <form autocomplete="off" class="card-form">
           <input
             type="text"
@@ -34,9 +32,10 @@
             name="question-1"
             class="question-input"
             placeholder="Question"
+            onfocus="createNewQuestion(this)"
             autofocus
           />
-          <div id="options-form-1" class="options-form">
+          <div class="options-form">
             <input
               type="text"
               placeholder="Option"
@@ -59,28 +58,20 @@
         <form autocomplete="off" class="card-form">
           <input
             type="text"
-            name="question-input"
+            id="question-2"
+            name="question-2"
             class="question-input"
             placeholder="Question"
+            onfocus="createNewQuestion(this)"
+            autofocus
           />
           <div class="options-form">
             <input
               type="text"
               placeholder="Option"
               class="option-input"
-              id="answer1"
-            />
-            <input
-              type="text"
-              placeholder="Option"
-              class="option-input"
-              id="answer2"
-            />
-            <input
-              type="text"
-              placeholder="Option"
-              class="option-input"
-              id="answer3"
+              id="question-2-option-1"
+              onfocus="createNewOption(this)"
             />
           </div>
         </form>
