@@ -2,14 +2,14 @@ function createNewOption(element) {
   // first check that this is the last option
   if (element.nextElementSibling == null) {
     console.log(element.id);
-    let question = element.id.split("-")[1];
-    let option = element.id.split("-")[3];
+    let question = parseInt(element.id.split("-")[1]);
+    let option = parseInt(element.id.split("-")[3]);
 
     let newOption = document.createElement("input");
     newOption.type = "text";
     newOption.placeholder = "Option";
     newOption.className = "option-input";
-    newOption.id = "question-" + question + "-option-" + option + 1 + "";
+    newOption.id = "question-" + question + "-option-" + (option + 1) + "";
     newOption.onfocus = function () {
       createNewOption(this);
     };
