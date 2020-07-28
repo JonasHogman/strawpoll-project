@@ -1,8 +1,4 @@
 function createNewOption(element) {
-  element.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
   // first check that this is the last option
   if (element.nextElementSibling == null) {
     console.log(element.id);
@@ -20,16 +16,16 @@ function createNewOption(element) {
 
     element.parentNode.appendChild(newOption);
   }
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
 }
 
 function createNewQuestion(element) {
   var questionsWrapper = element.parentNode.parentNode;
-  questionsWrapper.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
   if (questionsWrapper.nextElementSibling == null) {
-    let question = element.id.split("-")[1];
+    let question = parseInt(element.id.split("-")[1]);
 
     let questionBoxHtml = `
       <div class="box-header">
@@ -65,4 +61,8 @@ function createNewQuestion(element) {
 
     questionsWrapper.parentNode.appendChild(newQuestionBox);
   }
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
 }
