@@ -15,65 +15,74 @@
     <title>Create Survey</title>
   </head>
   <body>
-    <header class="header"></header>
-    <main>
-      <div class="box">
-        <div class="box-header">
-          <div class="menu-icon">
-            <span class="material-icons md-light">
-              menu
-            </span>
-          </div>
-        </div>
-        <form autocomplete="off" class="card-form">
-          <input
-            type="text"
-            id="question-1"
-            name="question-1"
-            class="question-input"
-            placeholder="Question"
-            onfocus="createNewQuestion(this)"
-            autofocus
-          />
-          <div class="options-form">
-            <input
-              type="text"
-              placeholder="Option"
-              class="option-input"
-              id="question-1-option-1"
-              onfocus="createNewOption(this)"
-            />
-          </div>
-        </form>
+    <header class="header">
+      <div class="logo">
+        QuickSurveys
       </div>
-
-      <div class="box">
-        <div class="box-header">
-          <div class="menu-icon">
-            <span class="material-icons md-light">
-              menu
-            </span>
+    </header>
+    <main>
+      <div class="questions-wrapper">
+        <div class="box">
+          <div class="box-header">
+            <div class="menu-icon">
+              <span class="material-icons md-light">
+                menu
+              </span>
+            </div>
           </div>
-        </div>
-        <form autocomplete="off" class="card-form">
-          <input
-            type="text"
-            id="question-2"
-            name="question-2"
-            class="question-input"
-            placeholder="Question"
-            onfocus="createNewQuestion(this)"
-            autofocus
-          />
-          <div class="options-form">
+          <form autocomplete="off" class="card-form">
             <input
               type="text"
-              placeholder="Option"
-              class="option-input"
-              id="question-2-option-1"
-              onfocus="createNewOption(this)"
+              id="question-1"
+              name="question-1"
+              class="question-input"
+              placeholder="Question"
+              onfocus="createNewQuestion(this)"
+              autofocus
             />
+            <div class="options-form">
+              <input
+                type="text"
+                placeholder="Option"
+                class="option-input"
+                id="question-1-option-1"
+                onfocus="createNewOption(this)"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="box">
+          <div class="box-header">
+            <div class="menu-icon">
+              <span class="material-icons md-light">
+                menu
+              </span>
+            </div>
           </div>
+          <form autocomplete="off" class="card-form">
+            <input
+              type="text"
+              id="question-2"
+              name="question-2"
+              class="question-input"
+              placeholder="Question"
+              onfocus="createNewQuestion(this)"
+              autofocus
+            />
+            <div class="options-form">
+              <input
+                type="text"
+                placeholder="Option"
+                class="option-input"
+                id="question-2-option-1"
+                onfocus="createNewOption(this)"
+              />
+            </div>
+          </form>
+        </div>
+        <form action="./poll.html">
+          <button class="submit-btn">Create Survey</button>
         </form>
       </div>
     </main>

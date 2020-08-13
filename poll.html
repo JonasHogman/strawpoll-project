@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Create Survey</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        QuickSurveys
+      </div>
+    </header>
+    <main>
+      <div class="questions-wrapper">
+        <div class="box">
+          <div class="box-header"></div>
+          <form autocomplete="off" class="card-form">
+            <div class="question-title">
+              What is the best framework?
+            </div>
+            <div class="radio-buttons-container">
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-1-answer-1" />
+                <label for="question-1-answer-1" class="radio-label"
+                  >VueJS</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-1-answer-2" />
+                <label for="question-1-answer-2" class="radio-label"
+                  >React</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-1-answer-3" />
+                <label for="question-1-answer-3" class="radio-label"
+                  >Angular</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-1-answer-4" />
+                <label for="question-1-answer-4" class="radio-label"
+                  >Other</label
+                >
+              </span>
+            </div>
+          </form>
+        </div>
+
+        <div class="box">
+          <div class="box-header"></div>
+          <form autocomplete="off" class="card-form">
+            <div class="question-title">
+              What is the best framework?
+            </div>
+            <div class="radio-buttons-container">
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-2-answer-1" />
+                <label for="question-2-answer-1" class="radio-label"
+                  >VueJS</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-2-answer-2" />
+                <label for="question-2-answer-2" class="radio-label"
+                  >React</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-2-answer-3" />
+                <label for="question-2-answer-3" class="radio-label"
+                  >Angular</label
+                >
+              </span>
+              <span class="radio-button">
+                <input type="radio" name="radio-2" id="question-2-answer-4" />
+                <label for="question-2-answer-4" class="radio-label"
+                  >Other</label
+                >
+              </span>
+            </div>
+          </form>
+        </div>
+        <form action="./results.html">
+          <button class="submit-btn">Submit Answers</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
