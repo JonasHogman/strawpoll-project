@@ -113,9 +113,14 @@ main {
   height: 50px;
   line-height: 50px;
   margin-bottom: 25px;
-  margin-right: 3px;
   border-radius: 5px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media only screen and (max-width: 550px) {
+  .submit-btn {
+    margin-right: 25px;
+  }
 }
 
 .box-header {
@@ -218,7 +223,7 @@ main {
   width: 0%;
   border-radius: 3px;
   background-color: #95a0da;
-  transition: width 2s ease-out;
+  transition: width 0.75s ease-out;
 }
 
 input:focus,
