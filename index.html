@@ -49,6 +49,15 @@
                 onfocus="createNewOption(this)"
               />
             </div>
+            <div class="options-form">
+              <input
+                type="text"
+                placeholder="Option"
+                class="option-input"
+                id="question-1-option-2"
+                onfocus="createNewOption(this)"
+              />
+            </div>
           </form>
         </div>
 
@@ -79,14 +88,39 @@
                 onfocus="createNewOption(this)"
               />
             </div>
+            <div class="options-form">
+              <input
+                type="text"
+                placeholder="Option"
+                class="option-input"
+                id="question-2-option-2"
+                onfocus="createNewOption(this)"
+              />
+            </div>
           </form>
         </div>
-        <form action="./poll.html">
-          <button class="submit-btn">Create Survey</button>
-        </form>
+        <button class="submit-btn" onclick="openModal()">
+          Create Survey
+        </button>
       </div>
     </main>
     <footer class="footer"></footer>
     <script src="app.js"></script>
+
+    <div class="modal-container" id="modal">
+      <div class="modal-content">
+        <div class="modal-close">
+          <span class="material-icons" onclick="closeModal()">
+            close
+          </span>
+        </div>
+        <div class="modal-text">Survey created!</div>
+        <input
+          class="survey-url-input"
+          type="text"
+          value="example.com/survey-link/"
+        />
+      </div>
+    </div>
   </body>
 </html>

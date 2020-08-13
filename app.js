@@ -1,6 +1,20 @@
+function closeModal() {
+  modalElement = document.getElementById("modal");
+  modalElement.style.display = "none";
+}
+
+function openModal() {
+  modalElement = document.getElementById("modal");
+  modalElement.style.display = "block";
+}
+
 function createNewOption(element) {
   // first check that this is the last option
-  if (element.nextElementSibling == null) {
+  if (
+    element.nextElementSibling == null &&
+    element.id != "question-1-option-1" &&
+    element.id != "question-2-option-1"
+  ) {
     console.log(element.id);
     let question = parseInt(element.id.split("-")[1]);
     let option = parseInt(element.id.split("-")[3]);
