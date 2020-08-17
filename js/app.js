@@ -15,7 +15,6 @@ function createNewOption(element) {
     element.id != "question-1-option-1" &&
     element.id != "question-2-option-1"
   ) {
-    console.log(element.id);
     let question = parseInt(element.id.split("-")[1]);
     let option = parseInt(element.id.split("-")[3]);
 
@@ -37,12 +36,15 @@ function createNewOption(element) {
 }
 
 function createNewQuestion(element) {
-  var questionsWrapper = element.parentNode.parentNode;
-  if (questionsWrapper.nextElementSibling == null) {
+  var questionsWrapper = element.parentNode.parentNode.parentNode;
+  if (
+    questionsWrapper.nextElementSibling == null &&
+    element.id != "question-1"
+  ) {
     let question = parseInt(element.id.split("-")[1]);
 
     let questionBoxHtml = `
-      <div class="box-header">
+    <div class="box-header">
       <div class="menu-icon">
         <span class="material-icons md-light">
           menu
@@ -53,7 +55,7 @@ function createNewQuestion(element) {
       <input
         type="text"
         id="question-${question + 1}"
-        name="question-1"
+        name="question-${question + 1}"
         class="question-input"
         placeholder="Question"
         onfocus="createNewQuestion(this)"
@@ -68,12 +70,23 @@ function createNewQuestion(element) {
           onfocus="createNewOption(this)"
         />
       </div>
+      <div class="options-form">
+        <input
+          type="text"
+          placeholder="Option"
+          class="option-input"
+          id="question-${question + 1}-option-2"
+          onfocus="createNewOption(this)"
+        />
+      </div>
     </form>`;
     newQuestionBox = document.createElement("div");
     newQuestionBox.className = "box";
     newQuestionBox.innerHTML = questionBoxHtml;
 
-    questionsWrapper.parentNode.appendChild(newQuestionBox);
+    button = document.getElementById("submit-btn");
+
+    questionsWrapper.insertBefore(newQuestionBox, button);
   }
   element.scrollIntoView({
     behavior: "smooth",

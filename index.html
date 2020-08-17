@@ -15,10 +15,9 @@
     <title>Create Survey</title>
   </head>
   <body>
+    <script src="./js/app.js"></script>
     <header class="header">
-      <div class="logo">
-        <a href="/">QuickSurveys</a>
-      </div>
+      <a href="/" class="logo">QuickSurveys</a>
     </header>
     <main>
       <div class="questions-wrapper">
@@ -99,7 +98,7 @@
             </div>
           </form>
         </div>
-        <button class="submit-btn" onclick="openModal()">
+        <button id="submit-btn" class="submit-btn" onclick="openModal()">
           Create Survey
         </button>
       </div>
@@ -127,6 +126,5 @@
         >
       </div>
     </div>
-    <script src="./js/app.js"></script>
   </body>
 </html>
