@@ -52,27 +52,39 @@ main {
 }
 
 .modal-content {
-  width: 275px;
-  height: 100px;
+  width: auto;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  padding-left: 25px;
+  padding: 20px;
+  padding-top: 10px;
   border-radius: 10px;
   box-shadow: black;
 }
 
 .modal-text {
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.modal-link {
+  float: right;
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .survey-url-input {
+  display: block;
   border: 1px solid black;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 14px;
+  width: 360px;
+  height: 40px;
 }
 
 .survey-url-input:hover,
@@ -82,8 +94,6 @@ main {
 
 .modal-close {
   float: right;
-  margin-top: 5px;
-  margin-right: 5px;
   cursor: pointer;
 }
 
